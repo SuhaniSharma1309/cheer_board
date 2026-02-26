@@ -4,13 +4,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Menu, X, ChevronDown, User } from "lucide-react";
 // import Logo from "./Logo.tsx";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+} from "@/src/components/ui/dropdown-menu";
 import Logo from "./Logo";
 
 const Nav = () => {
@@ -28,7 +28,7 @@ const Nav = () => {
     <nav className="fixed top-0 w-full z-20 bg-gradient-to-b from-white via-[#F4F9FF] to-[#E0ECFF]  text-zinc-900">
       <div className="flex items-center justify-between px-6 py-3 h-16 md:mx-8">
         <div className="mt-1 pr-8 border-r border-gray-200 h-[80%] flex items-start">
-          <Logo/>
+          <Logo />
         </div>
 
         {/* Desktop Menu */}

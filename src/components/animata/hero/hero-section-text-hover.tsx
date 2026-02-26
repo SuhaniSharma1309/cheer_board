@@ -1,7 +1,7 @@
 import React from "react";
 import { Map } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 
 interface ItemProps {
   emoji: string;
@@ -22,11 +22,11 @@ const HeroSectionTextHover: React.FC<HeroCardProps> = ({ className }) => {
     { emoji: "🏯", position: "right-[-20px] top-6 group-hover:translate-x-6" },
   ];
   const treasures = [
-  { emoji: "📚", position: "-left-12 -top-6 group-hover:-translate-y-6" },
-  { emoji: "☕", position: "-left-16 top-2 group-hover:-translate-x-6" },
-  { emoji: "😌", position: "right-0 -top-6 group-hover:-translate-y-6" },
-  { emoji: "✨", position: "right-10 top-2 group-hover:translate-x-6" },
-];
+    { emoji: "📚", position: "-left-12 -top-6 group-hover:-translate-y-6" },
+    { emoji: "☕", position: "-left-16 top-2 group-hover:-translate-x-6" },
+    { emoji: "😌", position: "right-0 -top-6 group-hover:-translate-y-6" },
+    { emoji: "✨", position: "right-10 top-2 group-hover:translate-x-6" },
+  ];
 
   return (
     <div
@@ -37,7 +37,6 @@ const HeroSectionTextHover: React.FC<HeroCardProps> = ({ className }) => {
     >
       <div className="mb-2 flex flex-col items-center justify-center gap-3">
         <div className="flex flex-col items-center justify-center font-bold leading-tight">
-
           <div className="flex items-center gap-2 text-4xl sm:text-6xl md:text-7xl">
             <span className="text-gray-400">FEEL</span>
 
