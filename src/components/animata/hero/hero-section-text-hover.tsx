@@ -8,7 +8,7 @@ const HeroSectionTextHover: React.FC = () => {
       <div className="absolute inset-0 bg-[url('/flower.jpg')] bg-cover bg-center hero-zoom"></div>
       
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6">
