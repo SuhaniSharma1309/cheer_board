@@ -12,10 +12,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "/" },
-    { name: "Messages", href: "/messages" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Check-In", href: "/dashboard" },
+    { name: "Wellness", href: "/wellness" },
+    { name: "Joy Missions", href: "/missions" },
+    { name: "Analytics", href: "/analytics" },
   ];
 
   return (
