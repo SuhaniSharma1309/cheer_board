@@ -7,16 +7,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export default function Navbar() {
+type LinkType ={
+  name: string;
+  href: string;
+};
+
+type NavbarProps = {
+  links: LinkType[];
+  variant?: "hero" | "dashboard";
+};
+
+export default function Navbar({links, variant = "dashboard"}: NavbarProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-
-  const links = [
-    { name: "Check-In", href: "/dashboard" },
-    { name: "Wellness", href: "/dashboard/wellness" },
-    { name: "Joy Missions", href: "/dashboard/missions" },
-    { name: "Analytics", href: "/dashboard/analytics" },
-  ];
 
   return (
     <>

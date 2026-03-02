@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSectionTextHover = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section id="about" className="relative h-screen w-full overflow-hidden">
 
       {/* Background Image */}
       <div className="absolute inset-0 bg-[url('/flower.jpg')] bg-cover bg-center hero-zoom"></div>

@@ -1,14 +1,17 @@
 import React from 'react'
+import CardDemo from "@/components/ui/cards-demo-1";
 
 const Features = () => {
-  return (
-    <div>Features</div>
-  )
+    return (
+      <div id="features" className="px-6 md:px-10 py-4">
+        Features
+      </div>
+    );
 }
 
 export default Features
 
-// remove this comment after editing
+// remove these comment after editing
 // sections name:
 // { name: "Happiness meter", href: "/dashboard" },
 // { name: "Wellness", href: "/dashboard/wellness" },

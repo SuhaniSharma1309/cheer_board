@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/hero/Navbar";
 import { UserButton } from "@clerk/nextjs";
 
 export default function DashboardLayout({
@@ -8,7 +8,15 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="flex h-screen relative flex-col md:flex-row md:overflow-hidden">
-        <Navbar/>
+      <Navbar
+        variant="dashboard"
+        links={[
+          { name: "Check-In", href: "/dashboard" },
+          { name: "Wellness", href: "/dashboard/wellness" },
+          { name: "Joy Missions", href: "/dashboard/missions" },
+          { name: "Analytics", href: "/dashboard/analytics" },
+        ]}
+      />
 
       <div className="flex grow sm:mt-28  flex-1 w-full md:overflow-y-auto sm:px-6 md:px-4 max-w-7xl mx-auto">
         {children}
