@@ -1,5 +1,5 @@
-import DailyJoyMissions from "@/components/dashboard/DailyJoyMissions";
-import MonthlyJoyCalendar from "@/components/dashboard/MonthlyJoyCalendar";
+import DailyJoyMissions from "@/app/_components/dashboard/DailyJoyMissions";
+import MonthlyJoyCalendar from "@/app/_components/dashboard/MonthlyJoyCalendar";
 
 export default function DailyJoyPage() {
   return (
