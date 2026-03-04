@@ -120,7 +120,7 @@ export default function HappinessMeter() {
       </div>
       <div className="mt-8 flex justify-center w-full flex-col gap-2">
         <div>
-          <h1 className="text-2xl font-bold">You Might Want to Listen to</h1>
+          {spotifyLink && <h1 className="text-2xl font-bold">You Might Want to Listen to</h1>}
         </div>
         <div className="">
           {spotifyLink && <Spotify wide link={spotifyLink} />}
