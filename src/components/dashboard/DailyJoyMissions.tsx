@@ -34,7 +34,7 @@ useEffect(() => {
     dailyJoy?: DailyJoyData;
   };
 
-  const saved = metadata.dailyJoy?.[today].completed;
+  const saved = metadata.dailyJoy?.[today]?.completed??[];
 
   if (saved && saved.length !== completed.length) {
       setCompleted(saved);
