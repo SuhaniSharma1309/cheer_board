@@ -38,7 +38,7 @@ const Wellness = () => {
     <div className="px-6 md:px-10 py-4">
       <div className="text-center max-w-2xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-          Wellness Hub
+          Wellness <span className="text-emerald-300">Hub</span>
         </h1>
         <p className="text-white/70 text-sm md:text-base leading-relaxed">
           Take a moment to pause, breathe, and recharge. Explore simple

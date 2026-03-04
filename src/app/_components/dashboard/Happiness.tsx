@@ -5,11 +5,14 @@ import { useState } from "react";
 
 export default function HappinessMeter() {
   const { isLoaded, isSignedIn, user } = useUser();
-  if (!isLoaded || !isSignedIn) return null;
 
-  const [text, setText] = useState("");
-  const [score, setScore] = useState<number | null>(null);
-  const [loading, setLoading] = useState(false);
+ const [text, setText] = useState("");
+ const [score, setScore] = useState<number | null>(null);
+ const [loading, setLoading] = useState(false);
+
+ if (!isLoaded || !isSignedIn) {
+   return null;
+ }
 
   const handleAnalyze = async (inputText: string) => {
     if (!inputText.trim()) return;
@@ -34,16 +37,16 @@ export default function HappinessMeter() {
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value); // ✅ update state properly
+    setText(e.target.value);
   };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await handleAnalyze(text); // ✅ trigger analysis
+    await handleAnalyze(text); 
   };
 
   return (
-    <div className="p-6 md:px-10 flex flex-col items-center mt-6 rounded-2xl shadow-xl bg-zinc-600 bg-[url('/dashboard-bg.jpg')] bg-cover bg-center bg-blend-overlay">
+    <div className="p-6 md:px-10 flex flex-col items-center mt-6 rounded-2xl shadow-xl bg-zinc-700 bg-[url('/dashboard-bg.jpg')] bg-cover bg-center bg-blend-overlay">
       <div className="text-center max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-white mb-4">
           Greetings{" "}
@@ -67,9 +70,9 @@ export default function HappinessMeter() {
 
       {/* Optional Separate Button */}
       <button
-        onClick={() => handleAnalyze(text)} // ✅ fixed onclick
+        onClick={() => handleAnalyze(text)}
         disabled={loading}
-        className="mt-4 text-white font-bold px-6 py-2 rounded-lg backdrop-blur-2xl bg-zinc-900 hover:bg-emerald-50 hover:text-zinc-900 disabled:opacity-50"
+        className="mt-4 text-white font-bold px-6 py-2 rounded-lg backdrop-blur-2xl bg-zinc-950 hover:bg-emerald-300 hover:text-zinc-950 disabled:opacity-50"
       >
         {loading ? "Analyzing..." : "Analyze"}
       </button>
