@@ -14,7 +14,6 @@ export default function DashboardLayout({
           { name: "Check-In", href: "/dashboard" },
           { name: "Wellness", href: "/dashboard/wellness" },
           { name: "Joy Missions", href: "/dashboard/daily-joy" },
-          { name: "Analytics", href: "/dashboard/analytics" },
         ]}
       />
 
